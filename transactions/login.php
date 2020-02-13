@@ -1,9 +1,11 @@
-<?php 
+<?php
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    if($_POST['username'] == 'admin' && $_POST['password'] == 'admin'){
-        header('location: ../main.php');
+    if($username == 'admin' && $password == 'admin'){
+        header("location: ../main.php");
     }else{
-        header('location: ../error.php');
+        header("location: ../error.php");
     }
 
 ?>
