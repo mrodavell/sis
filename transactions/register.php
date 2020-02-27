@@ -1,14 +1,18 @@
-<?php 
-    include_once('../utilities/validation.php');
+<?php
+    include_once("../utilities/validation.php");
 
     $username = $_POST['username'];
     $password = $_POST['password'];
     $repassword = $_POST['repassword'];
 
-    if(validate($password, $repassword)){
-        echo "Password is ok";        
+    if(validate($username) || validate($password)){
+        echo "Invalid Inputs";
     }else{
-        echo "Password is not accepted";
+        if(isStrongPassword($password) || isPasswordMatch($password, $repassword)){
+            echo "Invalid Password";
+        }else{
+            echo "Successfully Registered";
+        }
     }
-
+   
 ?>

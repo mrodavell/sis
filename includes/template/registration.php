@@ -8,7 +8,7 @@
                 <form method="post" action="transactions/register.php">
                     <div class="col-md-12 mb-2">
                         <small id="msg"></small>
-                        <input type="text" onkeyup="validate(this);" name="username" class="form-control" placeholder="Username" required>
+                        <input type="text" name="username" class="form-control" placeholder="Username" required>
                     </div>
                     <div class="col-md-12 mb-2">
                         <input type="password"  name="password" class="form-control" placeholder="Password" required>
@@ -20,7 +20,7 @@
                         <button type="submit" class="btn btn-primary mb-1 form-control">
                             Register
                         </button>
-                        <a href="index.php" class="btn btn-primary form-control">
+                        <a href="/sis/" class="btn btn-primary form-control">
                             Go Back
                         </a>
                     </div>
@@ -33,14 +33,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    function validate(e){
-        let el = document.getElementById('msg');
-        if(e.value.length <= 5){
-            el.innerHTML = "Username is too short";
-        }else{
-            el.innerHTML = "";
-        }
-    }
-</script>
