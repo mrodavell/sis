@@ -7,7 +7,7 @@
             <form action="utilities/upload.php" method="post" enctype="multipart/form-data">
                 Select image to upload:
                 <div class="card p-2">
-                    <input type="file" name="fileToUpload" required accept=".jpg">
+                    <input type="file" name="fileToUpload[]" required accept=".jpg" multiple>
                 </div>              
                 <button class="btn btn-primary mt-2" type="submit">
                     <i class="fas fa-upload"></i></span> Upload

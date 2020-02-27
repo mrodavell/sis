@@ -1,5 +1,5 @@
 <?php
-
+    
     $size = $_FILES['fileToUpload']['size'];
     $type = $_FILES['fileToUpload']['type'];
 
