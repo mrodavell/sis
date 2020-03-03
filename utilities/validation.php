@@ -1,6 +1,6 @@
 <?php 
     function validate($str, $repassword = ""){
-        return isValidPassword($str) && isEmpty($str) && checkSize($str) && passwordMatch($str, $repassword);
+        return isEmpty($str) && checkSize($str) && passwordMatch($str, $repassword);
     }
 
     function isEmpty($str){
@@ -8,7 +8,7 @@
     }
 
     function checkSize($str){
-        $min = 6;
+        $min = 3;
         $max = 12;
         return strlen($str) >= $min && strlen($str) <= $max;
     }

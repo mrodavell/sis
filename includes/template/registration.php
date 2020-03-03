@@ -5,6 +5,13 @@
                 <h4 class="bg-primary">Student Information System</h4>
             </div>
             <div class="card-body">
+                <?php
+                    if(isset($_GET['status']) && $_GET['status'] == false){
+                ?>
+                        <span class="text-center text-danger"><?= $_GET['msg']; ?></span>
+                <?php
+                    }
+                ?>
                 <form method="post" action="transactions/register.php">
                     <div class="col-md-12 mb-2">
                         <small id="msg"></small>
@@ -33,14 +40,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    function validate(e){
-        let el = document.getElementById('msg');
-        if(e.value.length <= 5){
-            el.innerHTML = "Username is too short";
-        }else{
-            el.innerHTML = "";
-        }
-    }
-</script>
