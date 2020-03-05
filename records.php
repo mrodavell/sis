@@ -44,10 +44,10 @@
                 <td><?= $row['userid']; ?></td>
                 <td><?= $row['username']; ?></td>
                 <td><?= $row['password']; ?></td>
-                <td><?= $row['usertype']; ?></td>
+                <td><?= ucfirst($row['usertype']); ?></td>
                 <td><?= ($row['status']) ? 'Active' : 'Inactive'; ?></td>
                 <td>
-                    <a href="#">
+                    <a href="update.php?userid=<?= $row['userid']; ?>">
                         <span class="fas fa-edit text-warning"></span>
                         Update
                     </a> |
